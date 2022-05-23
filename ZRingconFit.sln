@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZRingconFit", "ZRingconFit\ZRingconFit.csproj", "{FD340E7F-96FE-4A33-8C10-E79319436CB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD340E7F-96FE-4A33-8C10-E79319436CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD340E7F-96FE-4A33-8C10-E79319436CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD340E7F-96FE-4A33-8C10-E79319436CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD340E7F-96FE-4A33-8C10-E79319436CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB1939A1-8B83-41C5-A7EA-30E66E76272C}
+	EndGlobalSection
+EndGlobal

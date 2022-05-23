@@ -1,0 +1,41 @@
+﻿<Window x:Class="ZRingconFit.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZRingconFit"
+        mc:Ignorable="d"
+        Title="SettingWindow" Height="500" Width="750" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Opacity="0.9">
+    <Grid Background="#1E1E1E">
+        <Border BorderBrush="White" BorderThickness="5"/>
+        <Label x:Name="lb_JC" Content="快速启动配置" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="36" Foreground="White"/>
+
+        <Label Content="yuzu路径：" HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="24" Foreground="White" Margin="60,120,0,0"/>
+        <TextBox x:Name="tb_YuzuUri" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="200,120,0,0" Height="40" Width="420"/>
+        <Button x:Name="btn_BrowserYuzu" Content="..." HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="24" Margin="0,120,60,0" Height="40" Width="63" Click="btn_BrowserYuzu_Click"/>
+
+        <Label Content="user路径：" HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="24" Foreground="White" Margin="60,200,0,0"/>
+        <TextBox x:Name="tb_UserUri" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="200,200,0,0" Height="40" Width="320"/>
+        <Button x:Name="btn_BrowserUser" Content="..." HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="24" Margin="0,200,160,0" Height="40" Width="63" Click="btn_BrowserUser_Click"/>
+        <Button x:Name="btn_SaveYuzuConfig" Content="保存配置" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="18" Margin="0,200,60,0" Height="40" Width="95" Click="btn_SaveYuzuConfig_Click"/>
+
+        <Label Content="游戏路径：" HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="24" Foreground="White" Margin="60,280,0,0"/>
+        <TextBox x:Name="tb_GameUri" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="200,280,0,0" Height="40" Width="420"/>
+        <Button x:Name="btn_BrowserGame" Content="..." HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="24" Margin="0,280,60,0" Height="40" Width="63" Click="btn_BrowserGame_Click" />
+
+        <Viewbox  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,340,0,0" Height="30">
+            <CheckBox x:Name="cb_AutoStartGame" Content="按压健身环启动游戏" Foreground="White" Checked="cb_AutoStartGame_Checked" Unchecked="cb_AutoStartGame_Checked"/>
+        </Viewbox>
+
+        <Viewbox  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,340,60,0" Height="30">
+            <CheckBox x:Name="cb_ReplaceConfig" Content="启动时替换Config" Foreground="White" Checked="cb_AutoStartGame_Checked" Unchecked="cb_AutoStartGame_Checked"/>
+        </Viewbox>
+
+        <Button x:Name="btn_Search" Content="自动搜索" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" Margin="0,0,500,60" Height="40" Width="120" Click="btn_Search_Click"/>
+        <Button x:Name="btn_SaveAndStart" Content="保存并启动" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" Margin="0,0,170,60" Height="40" Width="150" Click="btn_SaveAndStart_Click"/>
+        <Button x:Name="btn_Save" Content="保存" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" Margin="170,0,0,60" Height="40" Width="120" Click="btn_Save_Click"/>
+        <Button x:Name="btn_Backup" Content="关闭" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" Margin="500,0,0,60" Height="40" Width="120" Click="btn_Backup_Click"/>
+
+        <local:LoadingPage x:Name="loading" Visibility="Hidden"/>
+    </Grid>
+</Window>
