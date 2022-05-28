@@ -161,6 +161,7 @@ namespace ZRingconFit
                     }
                 }
             }
+            reinstall:
             try
             {
                 //if (!has86 || !has64)
@@ -188,7 +189,8 @@ namespace ZRingconFit
                         {
                             proc.WaitForExit();
                             has86 = false;
-                            goto recheck;
+                            //goto recheck;
+                            goto reinstall;
                         }
                     }
                 }
@@ -533,9 +535,13 @@ namespace ZRingconFit
                 Directory.CreateDirectory(folder);
             }
             string configPath = Global.UserUri + "config\\qt-config.ini";
-            if (File.Exists(configPath) && File.Exists(folder + "\\qt-config.ini"))
+            if (File.Exists(configPath) && File.Exists(folder + "qt-config.ini"))
             {
                 File.Copy(folder + "\\qt-config.ini", configPath, true);
+            }
+            else
+            {
+                MessageBox.Show("未保存配置好的配置文件，无法自动替换");
             }
         }
 
@@ -543,7 +549,7 @@ namespace ZRingconFit
         {
             if (Global.YuzuUri == "" || Global.GameUri == "")
                 return;
-            StopProcess("yuzu");
+            StopProcess(Global.YuzuName);
             if (Global.ReplaceConfig)
             {
                 ReplaceConfig();
@@ -571,7 +577,7 @@ namespace ZRingconFit
                 {
                     i++;
                     Thread.Sleep(1000);
-                    if(CheckProcess("yuzu"))
+                    if(CheckProcess(Global.YuzuName))
                     {
                         break;
                     }

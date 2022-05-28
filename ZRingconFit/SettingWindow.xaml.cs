@@ -68,6 +68,7 @@ namespace ZRingconFit
             Global.YuzuUri = tb_YuzuUri.Text;
             Global.UserUri = tb_UserUri.Text;
             Global.GameUri = tb_GameUri.Text;
+            Global.YuzuName = System.IO.Path.GetFileNameWithoutExtension(Global.YuzuUri);
             Global.AutoStartGame = cb_AutoStartGame.IsChecked.Value;
             Global.ReplaceConfig = cb_ReplaceConfig.IsChecked.Value;
             Global.SaveConfig();
@@ -107,6 +108,11 @@ namespace ZRingconFit
             }
             else
             {
+                string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+                if (Directory.Exists($"{appData}\\yuzu"))
+                {
+                    tb_UserUri.Text = $"{appData}\\yuzu\\";
+                }
                 /*
                 查找AppData中自动生成的user，待补充
                 */

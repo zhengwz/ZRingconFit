@@ -1,6 +1,7 @@
 ﻿using BaseServer;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace ZRingconFit
         public static string YuzuUri = "";
         public static string UserUri = "";
         public static string GameUri = "";
+        public static string YuzuName = "";
 
         public static bool AutoStartGame = false;
         public static bool ReplaceConfig = false;
@@ -23,6 +25,10 @@ namespace ZRingconFit
                 YuzuUri = ReadIniClass.getWithName("YuzuUri");
                 UserUri = ReadIniClass.getWithName("UserUri");
                 GameUri = ReadIniClass.getWithName("GameUri");
+                if(YuzuUri!="")
+                {
+                    YuzuName = Path.GetFileNameWithoutExtension(YuzuUri);
+                }
 
                 string tempStr = ReadIniClass.getWithName("AutoStartGame");
                 if (bool.TryParse(tempStr, out _))
