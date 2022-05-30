@@ -1,4 +1,4 @@
-# ZRingconFit 2.0
+# ZRingconFit 2.1
 
 配合ZRingDriver使用
 
