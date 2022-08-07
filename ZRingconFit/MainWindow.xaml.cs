@@ -35,6 +35,7 @@ namespace ZRingconFit
         private bool ConfigMode = false;
         private bool RingconStarted = false;
         private bool checkDriver = false;
+        private bool IsStarted = false;
         private double RingconValue = 0.00;
 
         private HashSet<string> added = new HashSet<string>();
@@ -547,6 +548,9 @@ namespace ZRingconFit
 
         private void StartGame(bool config = false)
         {
+            if (IsStarted && CheckProcess(Global.YuzuName))
+                return;
+            IsStarted = true;
             if (Global.YuzuUri == "" || Global.GameUri == "")
                 return;
             StopProcess(Global.YuzuName);
