@@ -1,6 +1,6 @@
 # ZRingconFit 2.1
 
-配合ZRingDriver使用
+配合ZRingDriver编译
 
 # 视频
 https://www.bilibili.com/video/BV1SB4y1979C/
