@@ -1,6 +1,6 @@
-# ZRingconFit 2.1
+# ZRingconFit 2.1.1
 
-配合视频食用
+ZRingconFit 2.1.1
 
 # 视频
 https://www.bilibili.com/video/BV1SB4y1979C/
